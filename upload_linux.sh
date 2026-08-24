@@ -1,0 +1,2 @@
+cp -r WD-BP /home/daniel/.var/app/io.mrarm.mcpelauncher/data/mcpelauncher/games/com.mojang/behavior_packs
+cp -r WD-RP /home/daniel/.var/app/io.mrarm.mcpelauncher/data/mcpelauncher/games/com.mojang/resource_packs

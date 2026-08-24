@@ -8,5 +8,5 @@ system.runInterval(
 			const player = players[i];
 			wawla(player);
 		};
-	},
+	}, 4
 );
