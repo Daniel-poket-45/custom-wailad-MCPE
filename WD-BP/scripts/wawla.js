@@ -41,10 +41,11 @@ export const wawla = (player) => {
             const durability = itemStack?.getComponent("durability");
             const hasDurability = durability !== undefined;
 
-            // Cálculos finais
+            // Adquire as prócimas constantes de durabilidade, caso existam
             const currentDurability = hasDurability ? durability.damage : undefined;
             const maxDurability = hasDurability ? durability.maxDurability : undefined;
 
+            // Exibe as informações do item na ActionBar
             player.onScreenDisplay.setActionBar({
                 rawtext: [
                     //for item name
@@ -56,8 +57,8 @@ export const wawla = (player) => {
                     { text: ` ${item.itemStack.amount}x` },
                     { text: item.itemStack.nameTag ? ("\n§7Display name: " + item.itemStack.nameTag) : "" },
 
-                    //for equipments
-                    { text: item.itemStack.type? `\n§7Type: ${item.itemStack.type}` : "" },
+                    //TODO for equipments
+                    //{ text: item.itemStack.type? `\n§7Type: ${item.itemStack.type}` : "" },
                     //@ts-ignore
                     { text: hasDurability ? `\n§7Durability: §e${maxDurability - currentDurability}§7 / §e${maxDurability}` : "" },
 
@@ -77,7 +78,7 @@ export const wawla = (player) => {
         const ageable = entity.getComponent("minecraft:ageable");
         //TODOconst feedable = entity.getComponent("minecraft:feedable");
 
-
+        // Exibe as informações da entidade na ActionBar
         player.onScreenDisplay.setActionBar({
             rawtext: [
                 //for entity name
@@ -157,7 +158,7 @@ export const wawla = (player) => {
             };
         };
 
-
+        // Exibe as informações do bloco na ActionBar
         player.onScreenDisplay.setActionBar({
             rawtext: [
                 {
@@ -178,7 +179,7 @@ export const wawla = (player) => {
     };
 };
 
-/**    const netheriteTier = [];
+/** const netheriteTier = [];
     const diamondTier = [];
     const ironTier = [];
     const stoneTier = [];
